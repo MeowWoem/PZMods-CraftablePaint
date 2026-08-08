@@ -1,0 +1,12 @@
+module Base {
+
+    item SlakedLime {
+        DisplayName = Slaked Lime,
+		DisplayCategory = Material,
+        ItemType = base:normal,
+		Weight = 0.9,
+        Icon = Quicklime,
+        WorldStaticModel = Quicklime,
+    }
+
+}

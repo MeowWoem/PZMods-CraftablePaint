@@ -1,0 +1,408 @@
+module Base
+{
+
+	craftRecipe CraftSlakedLime
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Miscellaneous,
+		inputs
+		{
+			item 1 [Base.Bucket;Base.BucketForged;Base.BucketEmpty;Base.BucketCarved] mode:keep,
+            item 1 [*],
+            -fluid 0.6 categories[Water] mode:mixture,
+			item 1 [Base.Quicklime],
+		}
+		outputs
+		{
+			item 1 Base.SlakedLime,
+		}
+	}
+
+	craftRecipe MixPaintWhite
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 [Base.PaintbucketEmpty],
+            item 1 [*],
+            -fluid 1.5 categories[Water] mode:mixture,
+			item 3 [Base.SlakedLime],
+		}
+		outputs
+		{
+			item 1 Base.PaintWhite,
+		}
+	}
+
+	craftRecipe MixPaintBlack
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 tags[base:mortarpestle] mode:keep,
+			item 1 [Base.PaintbucketEmpty],
+            item 1 [*],
+            -fluid 1.5 categories[Water] mode:mixture,
+			item 2 [Base.SlakedLime],
+			item 1 [Base.Charcoal;Base.CharcoalCrafted],
+		}
+		outputs
+		{
+			item 1 Base.PaintBlack,
+		}
+	}
+
+	craftRecipe MixPaintYellow
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 [Base.PaintbucketEmpty],
+            item 1 [*],
+            -fluid 1.5 categories[Water] mode:mixture,
+			item 2 [Base.SlakedLime],
+			item 80 [Base.Mustard],
+		}
+		outputs
+		{
+			item 1 Base.PaintYellow,
+		}
+	}
+
+	craftRecipe MixPaintBlue
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 tags[base:mortarpestle] mode:keep,
+			item 1 [Base.PaintbucketEmpty],
+            item 1 [*],
+            -fluid 1.5 categories[Water] mode:mixture,
+			item 2 [Base.SlakedLime],
+			item 40 [Base.BerryBlue],
+		}
+		outputs
+		{
+			item 1 Base.PaintBlue,
+		}
+	}
+
+	craftRecipe MixPaintPurple
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 tags[base:mortarpestle] mode:keep,
+			item 1 [Base.PaintbucketEmpty],
+            item 1 [*],
+            -fluid 1.5 categories[Water] mode:mixture,
+			item 2 [Base.SlakedLime],
+			item 20 [Base.BerryBlue],
+			item 20 [Base.BerryBlack],
+		}
+		outputs
+		{
+			item 1 Base.PaintPurple,
+		}
+	}
+
+	craftRecipe MixPaintGreen
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 tags[base:mortarpestle] mode:keep,
+			item 1 [Base.PaintbucketEmpty],
+            item 1 [*],
+            -fluid 1.5 categories[Water] mode:mixture,
+			item 2 [Base.SlakedLime],
+			item 40 [Base.Spinach],
+		}
+		outputs
+		{
+			item 1 Base.PaintGreen,
+		}
+	}
+
+	craftRecipe MixPaintPink
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 tags[base:mortarpestle] mode:keep,
+			item 1 [Base.PaintbucketEmpty],
+            item 1 [*],
+            -fluid 1.5 categories[Water] mode:mixture,
+			item 2 [Base.SlakedLime],
+			item 40 [Base.Strewberrie],
+		}
+		outputs
+		{
+			item 1 Base.PaintPink,
+		}
+	}
+
+	craftRecipe MixPaintTurquoise
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 tags[base:file] mode:keep flags[MayDegradeLight],
+			item 1 [Base.PaintbucketEmpty],
+            item 1 [*],
+            -fluid 1.3 categories[Water] mode:mixture,
+			item 2 tags[base:vinegar],
+			item 2 [Base.SlakedLime],
+			item 2 [Base.CopperScrap],
+		}
+		outputs
+		{
+			item 1 Base.PaintTurquoise,
+		}
+	}
+
+	craftRecipe MixPaintRed
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 tags[base:file] mode:keep flags[MayDegradeLight],
+			item 1 [Base.PaintbucketEmpty],
+            item 1 [*],
+            -fluid 1.3 categories[Water] mode:mixture,
+			item 2 tags[base:vinegar],
+			item 2 [Base.SlakedLime],
+			item 1 [Base.ScrapMetal],
+		}
+		outputs
+		{
+			item 1 Base.PaintRed,
+		}
+	}
+
+	craftRecipe MixPaintBrown
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 [Base.PaintbucketEmpty],
+            item 1 [*],
+            -fluid 1.5 categories[Water] mode:mixture,
+			item 2 [Base.SlakedLime],
+			item 3 [Base.Clay],
+		}
+		outputs
+		{
+			item 1 Base.PaintBrown,
+		}
+	}
+
+	craftRecipe MixPaintGrey
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 [Base.PaintbucketEmpty],
+			item 5 [Base.PaintWhite],
+			item 5 [Base.PaintBlack],
+		}
+		outputs
+		{
+			item 1 Base.PaintGrey,
+		}
+	}
+
+	craftRecipe MixPaintGrey2
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 10 [Base.PaintWhite],
+			item 10 [Base.PaintBlack],
+		}
+		outputs
+		{
+			item 2 Base.PaintGrey,
+		}
+	}
+
+    craftRecipe MixPaintOrange
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 [Base.PaintbucketEmpty],
+			item 5 [Base.PaintRed],
+			item 5 [Base.PaintYellow],
+		}
+		outputs
+		{
+			item 1 Base.PaintOrange,
+		}
+	}
+
+	craftRecipe MixPaintOrange2
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 10 [Base.PaintRed],
+			item 10 [Base.PaintYellow],
+		}
+		outputs
+		{
+			item 2 Base.PaintOrange,
+		}
+	}
+
+	craftRecipe MixPaintCyan
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 [Base.PaintbucketEmpty],
+			item 5 [Base.PaintBlue],
+			item 5 [Base.PaintGreen],
+		}
+		outputs
+		{
+			item 1 Base.PaintCyan,
+		}
+	}
+
+	craftRecipe MixPaintCyan2
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 10 [Base.PaintBlue],
+			item 10 [Base.PaintGreen],
+		}
+		outputs
+		{
+			item 2 Base.PaintCyan,
+		}
+	}
+
+	craftRecipe MixPaintLightBrown
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 [Base.PaintbucketEmpty],
+			item 3 [Base.PaintBrown],
+			item 7 [Base.PaintWhite],
+		}
+		outputs
+		{
+			item 1 Base.PaintLightBrown,
+		}
+	}
+
+	craftRecipe MixPaintLightBrown2
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 6 [Base.PaintBrown],
+			item 14 [Base.PaintWhite],
+		}
+		outputs
+		{
+			item 2 Base.PaintLightBrown,
+		}
+	}
+
+	craftRecipe MixPaintLightBlue
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 1 [Base.PaintbucketEmpty],
+			item 3 [Base.PaintBlue],
+			item 7 [Base.PaintWhite],
+		}
+		outputs
+		{
+			item 1 Base.PaintLightBlue,
+		}
+	}
+
+	craftRecipe MixPaintLightBlue2
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			item 6 [Base.PaintBlue],
+			item 14 [Base.PaintWhite],
+		}
+		outputs
+		{
+			item 2 Base.PaintLightBlue,
+		}
+	}
+
+	
+}
