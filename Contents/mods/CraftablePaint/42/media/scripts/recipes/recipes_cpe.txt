@@ -247,7 +247,7 @@ module Base
 		}
 	}
 
-	craftRecipe MixPaintGrey2
+	craftRecipe MixPaintGreyBulk
 	{
 		timedAction = MixingBucket,
 		Time = 150,
@@ -282,7 +282,7 @@ module Base
 		}
 	}
 
-	craftRecipe MixPaintOrange2
+	craftRecipe MixPaintOrangeBulk
 	{
 		timedAction = MixingBucket,
 		Time = 150,
@@ -317,7 +317,7 @@ module Base
 		}
 	}
 
-	craftRecipe MixPaintCyan2
+	craftRecipe MixPaintCyanBulk
 	{
 		timedAction = MixingBucket,
 		Time = 150,
@@ -352,7 +352,7 @@ module Base
 		}
 	}
 
-	craftRecipe MixPaintLightBrown2
+	craftRecipe MixPaintLightBrownBulk
 	{
 		timedAction = MixingBucket,
 		Time = 150,
@@ -387,7 +387,7 @@ module Base
 		}
 	}
 
-	craftRecipe MixPaintLightBlue2
+	craftRecipe MixPaintLightBlueBulk
 	{
 		timedAction = MixingBucket,
 		Time = 150,
