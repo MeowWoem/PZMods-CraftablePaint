@@ -250,7 +250,7 @@ module Base
 	craftRecipe MixPaintGreyBulk
 	{
 		timedAction = MixingBucket,
-		Time = 150,
+		Time = 170,
 		Tags = InHandCraft,
 		category = Paint,
 		inputs
@@ -285,7 +285,7 @@ module Base
 	craftRecipe MixPaintOrangeBulk
 	{
 		timedAction = MixingBucket,
-		Time = 150,
+		Time = 170,
 		Tags = InHandCraft,
 		category = Paint,
 		inputs
@@ -320,7 +320,7 @@ module Base
 	craftRecipe MixPaintCyanBulk
 	{
 		timedAction = MixingBucket,
-		Time = 150,
+		Time = 170,
 		Tags = InHandCraft,
 		category = Paint,
 		inputs
@@ -355,7 +355,7 @@ module Base
 	craftRecipe MixPaintLightBrownBulk
 	{
 		timedAction = MixingBucket,
-		Time = 150,
+		Time = 170,
 		Tags = InHandCraft,
 		category = Paint,
 		inputs
@@ -390,7 +390,7 @@ module Base
 	craftRecipe MixPaintLightBlueBulk
 	{
 		timedAction = MixingBucket,
-		Time = 150,
+		Time = 170,
 		Tags = InHandCraft,
 		category = Paint,
 		inputs
@@ -404,5 +404,548 @@ module Base
 		}
 	}
 
+	/* WALLPAPERS MOD SUPPORT */
+	craftRecipe WallpapersMixPaintMagenta
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+	craftRecipe WallpapersMixPaintDustBlue
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintDustGreen
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintCamoGreen
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintMidGreen
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintMidBlue
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintIvory
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintDustLilac
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintLightOrange
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintWine
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintLightYellow
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintViolet
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintPeach
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintDarkGrey
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintDustOrange
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintLime
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintBeige
+	{
+		timedAction = MixingBucket,
+		Time = 150,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+	
+	craftRecipe WallpapersMixPaintMagentaBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintDustBlueBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintDustGreenBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintCamoGreenBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintMidGreenBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintMidBlueBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintIvoryBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintDustLilacBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintLightOrangeBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintWineBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintLightYellowBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintVioletBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintPeachBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintDarkGreyBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintDustOrangeBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintLimeBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
+
+	craftRecipe WallpapersMixPaintBeigeBulk
+	{
+		timedAction = MixingBucket,
+		Time = 170,
+		Tags = InHandCraft,
+		category = Paint,
+		inputs
+		{
+			
+		}
+		outputs
+		{
+			
+		}
+	}
 	
 }
