@@ -57,14 +57,20 @@ description=The result of dumping water on Quicklime — which, chemically, is e
 description=
 description=Handle it with basic care. It's not radioactive, it's not going to turn you into a zombie, but it will absolutely let you know if you weren't wearing the right gear. Speaking of which:
 description=
+description=[h2]Mod Support[/h2]
+description=[list]
+description=[*] [b]Paint coverage mods[/b] — every secondary color mixing ratio is recalculated dynamically from the actual UseDelta of vanilla paint buckets, so mods that change how much surface a bucket covers won't throw off your mix proportions.
+description=[*] [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2999595757]Wallpapers and More Paint Options[/url][/b] — if that mod is active, this one also unlocks realistic recipes for its extra shades (Magenta, Dust Blue, Camo Green, Wine, Ivory, and the rest of that mod's paint lineup), using the exact same lime-and-pigment logic as the base 15 colors. No extra pigment items to hunt down, just more colors to mix. If you don't have that mod installed, these recipes stay hidden — no clutter in your crafting menu.
+description=[/list]
+description=
 description=[h2]Planned Features[/h2]
 description=[list]
-description=[*] [b]Quicklime handling hazards[/b] — Slaking lime without gloves, a dust mask, and goggles is supposed to come with consequences (hand burns, coughing fits, temporary blindness — cumulative, because negligence should hurt a little, just like it does in real life). The Lua script for this isn't implemented yet, but it's coming.
+description=[*] [b]Quicklime handling hazards[/b] — Slaking lime without gloves, a dust mask, and goggles is supposed to come with consequences (hand burns, coughing fits, temporary blindness — cumulative, because negligence should hurt a little, just like it does in real life). The Lua script for this isn't implemented yet, but it's coming, alongside a Sandbox option to enable or disable it entirely.
 description=[*] Possible milk-based White Paint variant (because "milk paint" — casein paint made from milk and lime — was a real historical technique, not something I made up to sound smart)
 description=[/list]
 description=
 description=[hr][/hr]
 description=[h2]Checkout my other mods[/h2]
-description=[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3497998571][img]https://images.steamusercontent.com/ugc/17769830744469508437/51BB335225B2ED40C6FC929DF1550211A3AC60DE/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true[/img][/url] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3475536311][img]https://images.steamusercontent.com/ugc/12100275261491882697/33E295DD1100045F9B478FB11325E5D331695A42/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true[/img][/url] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3493292424][img]https://images.steamusercontent.com/ugc/15384947468815531752/F81E7D02699E7CE196CD4F554B9232A1CEC749C0/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true[/img][/url]
+description=[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3778691521][img]https://images.steamusercontent.com/ugc/16333673626757323012/72F09E40F1C70C1003ABC8274FB17F30ACCE3E3D/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true[/img][/url] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3497998571][img]https://images.steamusercontent.com/ugc/17769830744469508437/51BB335225B2ED40C6FC929DF1550211A3AC60DE/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true[/img][/url] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3475536311][img]https://images.steamusercontent.com/ugc/12100275261491882697/33E295DD1100045F9B478FB11325E5D331695A42/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true[/img][/url] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3493292424][img]https://images.steamusercontent.com/ugc/15384947468815531752/F81E7D02699E7CE196CD4F554B9232A1CEC749C0/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true[/img][/url]
 tags=Build 42;Items;Multiplayer;Realistic;QoL
 visibility=public
