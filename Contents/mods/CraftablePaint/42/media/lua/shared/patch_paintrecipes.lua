@@ -168,7 +168,7 @@ local patchRecipeVariant = function(recipeName, patch, namespace, bulk, output)
     recipe:getInputs():clear();
 
     local itemLines = buildItemLines(output and patch.inputs or patch, bulk and 2 or 1);
-    local bucketLine = bulk and "" or "item 1 [Base.PaintbucketEmpty],\n";
+    local bucketLine = bulk and "" or "item 1 [Base.PaintbucketEmpty] mode:destroy,\n";
 
     local outputsBlock = "";
     if output then

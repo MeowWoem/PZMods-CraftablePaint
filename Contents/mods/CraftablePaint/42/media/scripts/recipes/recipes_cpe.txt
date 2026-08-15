@@ -28,7 +28,7 @@ module Base
 		category = Paint,
 		inputs
 		{
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
             item 1 [*],
             -fluid 1.5 categories[Water] mode:mixture,
 			item 3 [Base.SlakedLime],
@@ -48,7 +48,7 @@ module Base
 		inputs
 		{
 			item 1 tags[base:mortarpestle] mode:keep,
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
             item 1 [*],
             -fluid 1.5 categories[Water] mode:mixture,
 			item 2 [Base.SlakedLime],
@@ -68,7 +68,7 @@ module Base
 		category = Paint,
 		inputs
 		{
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
             item 1 [*],
             -fluid 1.5 categories[Water] mode:mixture,
 			item 2 [Base.SlakedLime],
@@ -89,7 +89,7 @@ module Base
 		inputs
 		{
 			item 1 tags[base:mortarpestle] mode:keep,
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
             item 1 [*],
             -fluid 1.5 categories[Water] mode:mixture,
 			item 2 [Base.SlakedLime],
@@ -110,7 +110,7 @@ module Base
 		inputs
 		{
 			item 1 tags[base:mortarpestle] mode:keep,
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
             item 1 [*],
             -fluid 1.5 categories[Water] mode:mixture,
 			item 2 [Base.SlakedLime],
@@ -132,7 +132,7 @@ module Base
 		inputs
 		{
 			item 1 tags[base:mortarpestle] mode:keep,
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
             item 1 [*],
             -fluid 1.5 categories[Water] mode:mixture,
 			item 2 [Base.SlakedLime],
@@ -153,7 +153,7 @@ module Base
 		inputs
 		{
 			item 1 tags[base:mortarpestle] mode:keep,
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
             item 1 [*],
             -fluid 1.5 categories[Water] mode:mixture,
 			item 2 [Base.SlakedLime],
@@ -174,7 +174,7 @@ module Base
 		inputs
 		{
 			item 1 tags[base:file] mode:keep flags[MayDegradeLight],
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
             item 1 [*],
             -fluid 1.3 categories[Water] mode:mixture,
 			item 2 tags[base:vinegar],
@@ -196,7 +196,7 @@ module Base
 		inputs
 		{
 			item 1 tags[base:file] mode:keep flags[MayDegradeLight],
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
             item 1 [*],
             -fluid 1.3 categories[Water] mode:mixture,
 			item 2 tags[base:vinegar],
@@ -217,7 +217,7 @@ module Base
 		category = Paint,
 		inputs
 		{
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
             item 1 [*],
             -fluid 1.5 categories[Water] mode:mixture,
 			item 2 [Base.SlakedLime],
@@ -237,7 +237,7 @@ module Base
 		category = Paint,
 		inputs
 		{
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
 			item 5 [Base.PaintWhite],
 			item 5 [Base.PaintBlack],
 		}
@@ -272,7 +272,7 @@ module Base
 		category = Paint,
 		inputs
 		{
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
 			item 5 [Base.PaintRed],
 			item 5 [Base.PaintYellow],
 		}
@@ -307,7 +307,7 @@ module Base
 		category = Paint,
 		inputs
 		{
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
 			item 5 [Base.PaintBlue],
 			item 5 [Base.PaintGreen],
 		}
@@ -342,7 +342,7 @@ module Base
 		category = Paint,
 		inputs
 		{
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
 			item 3 [Base.PaintBrown],
 			item 7 [Base.PaintWhite],
 		}
@@ -377,7 +377,7 @@ module Base
 		category = Paint,
 		inputs
 		{
-			item 1 [Base.PaintbucketEmpty],
+			item 1 [Base.PaintbucketEmpty] mode:destroy,
 			item 3 [Base.PaintBlue],
 			item 7 [Base.PaintWhite],
 		}
