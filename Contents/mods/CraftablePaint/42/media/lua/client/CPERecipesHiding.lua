@@ -55,3 +55,47 @@ end
 
 Events.OnGameBoot.Add(OnGameBoot);
 
+
+if(isDebugEnabled()) then
+    local player = getSpecificPlayer(0);
+
+    local enabled = false;
+    local sm = getSearchMode();
+    local smo = sm:getSearchModeForPlayer(0);
+
+    local function onKeyStartPressed(key)
+        if key == Keyboard.KEY_F3 then
+               
+
+        print("radius: " .. ISSearchManager.getManager(player).radius)
+        print("blur: " .. ISSearchManager.getManager(player).overlayValues.blur)
+        print("desat: " .. ISSearchManager.getManager(player).overlayValues.desaturation)
+        print("dark: " .. ISSearchManager.getManager(player).overlayValues.darkness)
+
+        enabled = not enabled;
+
+        local blur = 2;
+        local desat = 10;
+        local radius = 0.2;
+        local darkness = 1;
+        local gw = 4;
+
+        smo:getBlur():setTargets(blur, blur);
+        smo:getDesat():setTargets(desat, desat);
+        smo:getRadius():setTargets(radius, radius);
+        smo:getDarkness():setTargets(darkness, darkness);
+        smo:getGradientWidth():setTargets(gw, gw);
+
+        --sm:setEnabled(0, enabled);
+        --sm:setOverride(0, false);
+        end
+    end
+
+    local function OnPlayerUpdate(player)
+        
+    end
+
+    Events.OnPlayerUpdate.Add(OnPlayerUpdate)
+
+    Events.OnKeyStartPressed.Add(onKeyStartPressed);
+end
