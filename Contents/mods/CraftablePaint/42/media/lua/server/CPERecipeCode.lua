@@ -44,15 +44,26 @@ function Recipe.OnCreate.CraftSlakedLime(craftRecipeData, character)
         handR:setNeedBurnWash(true);
         handR:setAdditionalPain(handR:getAdditionalPain() + 30);
         hasBeenInjured = true;
+        sendDamage(character);
     end
 
     if not hasProtection(character, SAFETY_GOGGLES_TYPES) then
-        
+        local instance = CPETemporaryBlindnessServer.getInstanceForPlayer(character, character:getPlayerNum(), character:getOnlineID());
+        --instance:activate(20);
+        instance:activate(ZombRand(2880, 4320));
+        hasBeenInjured = true;
     end
 
     if(hasBeenInjured) then
-        character:playerVoiceSound("PainFromLacerate");
-        HaloTextHelper.addBadText(character, getText("IGUI_BurnedByCausticSodaMessage"));
+        if(isMultiplayer()) then
+                sendServerCommand("CPEClient", "injurePlayer", {
+                playerNum   = character:getPlayerNum(),
+                playerOnlineID   = character:getOnlineID()
+            });
+        else
+            character:playerVoiceSound("PainFromLacerate");
+            HaloTextHelper.addBadText(character, getText("IGUI_BurnedByCausticSodaMessage"));
+        end
     end
     
 end

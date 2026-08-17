@@ -23,22 +23,32 @@ function CPETemporaryBlindnessClient:init(player, playerNum)
 	self.player = player;
 	self.playerNum = playerNum;
     
-	self.isActive = false;
-	self.duration = 0;
+    local md = self.player:getModData();
+	
+	self.isActive = md.CPETemporaryBlindness.isActive or false;
+	self.duration = md.CPETemporaryBlindness.duration or 0;
+	self.timeElapsed = md.CPETemporaryBlindness.timeElapsed or 0;
+	self.radius = md.CPETemporaryBlindness.radius or 0;
 	self.healRate = 1;
-	self.timeElapsed = 0;
     self.tempBlindnessInitValues = {
         blur = 1,
         desat = 10,
         radius = {
             min = 0.2,
-            max = 1,
+            max = 1.25,
         },
         darkness = 1,
         gw = 4
     };
+    self.radius = 0;
 
     self.sm = getSearchMode():getSearchModeForPlayer(playerNum);
+
+    if(self.player:hasTrait(CharacterTrait.FAST_HEALER)) then
+        self.healRate = 2;
+    elseif(self.player:hasTrait(CharacterTrait.SLOW_HEALER)) then
+        self.healRate = 0.5;
+    end
 
 end
 
@@ -47,30 +57,28 @@ function CPETemporaryBlindnessClient:activate(duration, radius)
 	self.duration = duration;
     self.timeElapsed = 0;
 
-    local radius = radius or ZombRand(self.tempBlindnessInitValues.radius.min, self.tempBlindnessInitValues.radius.max);
+    self.radius = radius or ZombRandFloat(self.tempBlindnessInitValues.radius.min, self.tempBlindnessInitValues.radius.max);
     self.sm:getBlur():setTargets(self.tempBlindnessInitValues.blur, self.tempBlindnessInitValues.blur);
     self.sm:getDesat():setTargets(self.tempBlindnessInitValues.desat, self.tempBlindnessInitValues.desat);
-    self.sm:getRadius():setTargets(radius, radius);
+    self.sm:getRadius():setTargets(self.radius, self.radius);
     self.sm:getDarkness():setTargets(self.tempBlindnessInitValues.darkness, self.tempBlindnessInitValues.darkness);
     self.sm:getGradientWidth():setTargets(self.tempBlindnessInitValues.gw, self.tempBlindnessInitValues.gw);
     getSearchMode():setEnabled(self.playerNum, true);
-    getSearchMode():setOverride(self.playerNum, true);
-  
+    --getSearchMode():setOverride(self.playerNum, true);
+    print(self.radius);
 end
 
 function CPETemporaryBlindnessClient:deactivate()
 	self.isActive = false;
 	self.duration = 0;
+    self.timeElapsed = 0;
     getSearchMode():setEnabled(self.playerNum, false);
-    getSearchMode():setOverride(self.playerNum, false);
+    --getSearchMode():setOverride(self.playerNum, false);
 end
 
-function CPETemporaryBlindnessClient:update()
-	local healRate = 1;
-    
+function CPETemporaryBlindnessClient:update()   
 
-    --PZMath.lerp
-
+    self.timeElapsed = self.timeElapsed + self.healRate;
     
 end
 
@@ -82,8 +90,28 @@ function CPETemporaryBlindnessClient:canReadMap()
 	return not self:isBlind();
 end
 
-local function onEveryOneMinute()
 
+local function onCreatePlayer(playerNum, player)
+    CPETemporaryBlindnessClient.getInstanceForPlayer(player, playerNum);
+    if(not isMultiplayer()) then
+        CPETemporaryBlindnessServer.getInstanceForPlayer(player, playerNum);
+    end
+end
+
+local function onPlayerUpdate(player)
+    local instance = CPETemporaryBlindnessClient.getInstanceForPlayer(player);
+    if(instance.isActive) then
+        local radius = PZMath.lerp(instance.radius, 25, instance.timeElapsed / instance.duration);
+        instance.sm:getRadius():setTargets(radius, radius);
+        instance.sm:getBlur():setTargets(instance.tempBlindnessInitValues.blur, instance.tempBlindnessInitValues.blur);
+        instance.sm:getDesat():setTargets(instance.tempBlindnessInitValues.desat, instance.tempBlindnessInitValues.desat);
+        instance.sm:getDarkness():setTargets(instance.tempBlindnessInitValues.darkness, instance.tempBlindnessInitValues.darkness);
+        instance.sm:getGradientWidth():setTargets(instance.tempBlindnessInitValues.gw, instance.tempBlindnessInitValues.gw);
+        getSearchMode():setEnabled(instance.playerNum, true);
+    end
+end
+
+local function onEveryOneMinute()
     for _, instance in pairs(instances) do
         if(instance.isActive) then
             instance:update();
@@ -91,17 +119,30 @@ local function onEveryOneMinute()
     end 
 end
 
-
 local function onServerCommand(module, command, args)
-	
+    print("CLIENT: onServerCommand: " .. module .. ":"..command);
     if(module == "CPETemporaryBlindness") then
-        print("CLIENT: sendServerCommand:update");
         print("        playerNum: " .. args.playerNum);
-        local instance = CPETemporaryBlindnessClient.getInstanceForPlayer(nil, args.playerNum);
+        print("        playerOnlineID: " .. args.playerOnlineID);
+
+ 
+        local player = getPlayerByOnlineID(args.playerOnlineID);
+        if(not player or not player:isLocalPlayer()) then return; end
+        local playerNum = player:getPlayerNum();
+       
+
+        local instance = CPETemporaryBlindnessClient.getInstanceForPlayer(nil, playerNum);
 
 		if(command == "activate") then
 
             instance:activate(args.duration, args.radius);
+
+        elseif(command == "init") then
+
+            instance.isActive = args.isActive;
+            instance.duration = args.duration;
+            instance.timeElapsed = args.timeElapsed;
+            instance.radius = args.radius;
 
         elseif(command == "deactivate") then
 
@@ -117,9 +158,18 @@ local function onServerCommand(module, command, args)
             instance.radius = args.radius;
 
         end
-
+    elseif(module == "CPEClient") then
+        if(command == "injurePlayer") then
+            local player = getPlayerByOnlineID(args.playerOnlineID);
+            if(not player or not player:isLocalPlayer()) then return; end
+            local sound = player:playerVoiceSound("PainFromLacerate");
+            print(sound);
+            HaloTextHelper.addBadText(player, getText("IGUI_BurnedByCausticSodaMessage"));
+        end
     end
 end
 
+Events.OnCreatePlayer.Add(onCreatePlayer)
+Events.OnPlayerUpdate.Add(onPlayerUpdate)
 Events.EveryOneMinute.Add(onEveryOneMinute)
 Events.OnServerCommand.Add(onServerCommand);

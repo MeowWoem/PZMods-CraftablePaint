@@ -7,6 +7,7 @@ module Base
 		Time = 150,
 		Tags = InHandCraft,
 		category = Miscellaneous,
+		OnCreate = Recipe.OnCreate.CraftSlakedLime,
 		inputs
 		{
 			item 1 [Base.Bucket;Base.BucketForged;Base.BucketEmpty;Base.BucketCarved] mode:keep,
