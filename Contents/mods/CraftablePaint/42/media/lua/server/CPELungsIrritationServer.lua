@@ -112,7 +112,11 @@ function CPELungsIrritationServer:update()
     local coughChance = PZMath.lerp(CPELungsIrritationServer.coughChance.start, CPELungsIrritationServer.coughChance["end"], healProgress);
 
     if(ZombRand(100) < coughChance) then
-        self.player:triggerCough();
+        if(isMultiplayer()) then
+            self.player:sendObjectChange(IsoObjectChange.COUGH);
+        else
+            self.player:triggerCough();
+        end
     end
 
     local md = self.player:getModData();
@@ -125,7 +129,7 @@ function CPELungsIrritationServer:update()
         print("        coughChance: " .. coughChance);
     end
 
-    if(self.timeElapsed >= self.duration) then
+    if(self.timeElapsed >= self.duration or self.player:isGodMod()) then
         self:deactivate();
     end
 end
