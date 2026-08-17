@@ -24,6 +24,13 @@ function CPETemporaryBlindnessClient:init(player, playerNum)
 	self.playerNum = playerNum;
     
     local md = self.player:getModData();
+    md.CPETemporaryBlindness = md.CPETemporaryBlindness or {
+        isActive = false,
+        duration = 0,
+        timeElapsed = 0,
+        radius = 0,
+        isIlliterate = player:hasTrait(CharacterTrait.ILLITERATE);
+    };
 	
 	self.isActive = md.CPETemporaryBlindness.isActive or false;
 	self.duration = md.CPETemporaryBlindness.duration or 0;
