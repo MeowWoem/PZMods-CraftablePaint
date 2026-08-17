@@ -7,5 +7,6 @@
     "IGUI_CPE_ProtectionGoggles": "safety goggles",
     "IGUI_CPE_ProtectionMask": "a mask",
     "IGUI_CPE_PreventionAdvice": "Perhaps you should have worn %1 before handling this mixture.",
-    "IGUI_CPE_And": "and"
+    "IGUI_CPE_And": "and",
+    "IGUI_CPE_CantReadMap": "I can't see well enough to read the map"
 }
