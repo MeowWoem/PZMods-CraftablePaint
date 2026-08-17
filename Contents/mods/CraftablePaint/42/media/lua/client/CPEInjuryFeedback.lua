@@ -35,9 +35,7 @@ function CPEInjuryFeedback.notify(character, handInjury, eyeInjury, lungsIrritat
     if(#symptoms == 0) then return; end
  
     local message = table.concat(symptoms, " ") .. "\n" .. getText("IGUI_CPE_PreventionAdvice", joinWithAnd(missingProtections));
-    local color = getCore():getBadHighlitedColor();
-    character:setHaloNote(message, color:getR() * 255, color:getG() * 255, color:getB() * 255, 400);
-    HaloTextHelper.addBadText(character, message);
+    CPEUtils.addBadText(character, message);
  
     if(handInjury or eyeInjury) then
         character:transmitPlayerVoiceSound("PainFromLacerate");
