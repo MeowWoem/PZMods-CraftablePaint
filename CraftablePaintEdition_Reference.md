@@ -115,19 +115,24 @@ Any item below counts — you only need one per category.
 
 ### Rubber Gloves
 Prevents hand burns.
-- `Base.Gloves_Dish`
-- `Base.Gloves_Surgical`
+- Rubber Gloves `(Base.Gloves_Dish)`
+- Surgical Gloves `(Base.Gloves_Surgical)`
 
 ### Safety Goggles
 Prevents temporary blindness.
-- `Base.Glasses_OldWeldingGoggles`
-- `Base.Glasses_SafetyGoggles`
-- `Base.Glasses_SkiGoggles`
-- `Base.Glasses_SwimmingGoggles`
-- `Base.WeldingMask`
+- Old Welding Goggles `(Base.Glasses_OldWeldingGoggles)`
+- Safety Goggles `(Base.Glasses_SafetyGoggles)`
+- Ski Goggles `(Base.Glasses_SkiGoggles)`
+- Swimming Goggles `(Base.Glasses_SwimmingGoggles)`
+- Welding Mask `(Base.WeldingMask)`
+- Gas Mask (with or without filter) `(Base.Hat_GasMask`)`
+- Improvised Gas Mask (with or without filter) `(Base.Hat_ImprovisedGasMak`)`
+- Half Mask Separator (with or without filter) `(Base.Hat_BuilderRespirator)`
 
 ### Mask
 Prevents lung irritation.
-- `Base.Mask_Dust`
-- `Base.Mask_Gas`
-- `Base.Mask_Surgical`
+- Dust Mask `(Base.Mask_Dust)`
+- Surgical Mask `(Base.Mask_Surgical)`
+- Gas Mask (with filter but works with worn filters) `(Base.Hat_GasMask`)`
+- Improvised Gas Mask (with filter but works with worn filters) `(Base.Hat_ImprovisedGasMak`)`
+- Half Mask Separator (with filter but works with worn filters) `(Base.Hat_BuilderRespirator)`

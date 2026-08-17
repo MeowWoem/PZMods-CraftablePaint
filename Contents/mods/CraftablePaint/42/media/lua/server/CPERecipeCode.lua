@@ -15,12 +15,18 @@ local SAFETY_GOGGLES_TYPES = {
     ["Base.Glasses_SkiGoggles"] = true,
     ["Base.Glasses_SwimmingGoggles"] = true,
     ["Base.WeldingMask"] = true,
+    ["Base.Hat_GasMask"] = true,
+    ["Base.Hat_GasMask_nofilter"] = true
+    ["Base.Hat_ImprovisedGasMask"] = true,
+    ["Base.Hat_ImprovisedGasMask_nofilter"] = true
 };
 
 local MASK_TYPES = {
     ["Base.Mask_Dust"] = true,
-    ["Base.Mask_Gas"] = true,
+    ["Base.Hat_GasMask"] = true,
+    ["Base.Hat_ImprovisedGasMask"] = true,
     ["Base.Mask_Surgical"] = true,
+    ["Base.Hat_BuilderRespirator"] = true
 };
 
 local function hasProtection(character, protectionType)
