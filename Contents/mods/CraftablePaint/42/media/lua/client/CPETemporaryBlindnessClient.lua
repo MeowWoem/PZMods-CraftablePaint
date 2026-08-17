@@ -65,7 +65,6 @@ function CPETemporaryBlindnessClient:activate(duration, radius)
     self.sm:getGradientWidth():setTargets(self.tempBlindnessInitValues.gw, self.tempBlindnessInitValues.gw);
     getSearchMode():setEnabled(self.playerNum, true);
     --getSearchMode():setOverride(self.playerNum, true);
-    print(self.radius);
 end
 
 function CPETemporaryBlindnessClient:deactivate()
@@ -120,10 +119,14 @@ local function onEveryOneMinute()
 end
 
 local function onServerCommand(module, command, args)
-    print("CLIENT: onServerCommand: " .. module .. ":"..command);
+    if(isDebugEnabled()) then
+        print("CLIENT: onServerCommand: " .. module .. ":"..command);
+    end
     if(module == "CPETemporaryBlindness") then
-        print("        playerNum: " .. args.playerNum);
-        print("        playerOnlineID: " .. args.playerOnlineID);
+        if(isDebugEnabled()) then
+            print("        playerNum: " .. args.playerNum);
+            print("        playerOnlineID: " .. args.playerOnlineID);
+        end
 
  
         local player = getPlayerByOnlineID(args.playerOnlineID);
@@ -150,9 +153,11 @@ local function onServerCommand(module, command, args)
 
 
         elseif(command == "update") then
-            print("        duration: " .. args.duration);
-            print("        timeElapsed: " .. args.timeElapsed);
-            print("        radius: " .. args.radius);
+            if(isDebugEnabled()) then
+                print("        duration: " .. args.duration);
+                print("        timeElapsed: " .. args.timeElapsed);
+                print("        radius: " .. args.radius);
+            end
             instance.duration = args.duration;
             instance.timeElapsed = args.timeElapsed;
             instance.radius = args.radius;
@@ -163,7 +168,9 @@ local function onServerCommand(module, command, args)
             local player = getPlayerByOnlineID(args.playerOnlineID);
             if(not player or not player:isLocalPlayer()) then return; end
             local sound = player:playerVoiceSound("PainFromLacerate");
-            print(sound);
+            if(isDebugEnabled()) then
+                print(sound);
+            end
             HaloTextHelper.addBadText(player, getText("IGUI_BurnedByCausticSodaMessage"));
         end
     end

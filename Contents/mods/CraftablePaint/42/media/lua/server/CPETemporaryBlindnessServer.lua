@@ -73,13 +73,15 @@ function CPETemporaryBlindnessServer:init(player, playerNum, playerOnlineID)
 
     self.clientInstance = nil;
     if(isMultiplayer()) then
-        print("SERVER: sendServerCommand:init");
-        print("        isActive: " .. tostring(self.isActive));
-        print("        duration: " .. self.duration);
-        print("        timeElapsed: " .. self.timeElapsed);
-        print("        radius: " .. self.radius);
-        print("        playerNum: " .. self.playerNum);
-        print("        playerOnlineID: " .. self.playerOnlineID);
+        if(isDebugEnabled()) then
+            print("SERVER: sendServerCommand:init");
+            print("        isActive: " .. tostring(self.isActive));
+            print("        duration: " .. self.duration);
+            print("        timeElapsed: " .. self.timeElapsed);
+            print("        radius: " .. self.radius);
+            print("        playerNum: " .. self.playerNum);
+            print("        playerOnlineID: " .. self.playerOnlineID);
+        end
         sendServerCommand("CPETemporaryBlindness", "init", {
             isActive = self.isActive,
             duration = self.duration,
@@ -114,11 +116,13 @@ function CPETemporaryBlindnessServer:activate(duration, radius)
     self.player:transmitModData();
 
     if(isMultiplayer()) then
-        print("SERVER: sendServerCommand:activate");
-        print("        duration: " .. self.duration);
-        print("        radius: " .. self.radius);
-        print("        playerNum: " .. self.playerNum);
-        print("        playerOnlineID: " .. self.playerOnlineID);
+        if(isDebugEnabled()) then
+            print("SERVER: sendServerCommand:activate");
+            print("        duration: " .. self.duration);
+            print("        radius: " .. self.radius);
+            print("        playerNum: " .. self.playerNum);
+            print("        playerOnlineID: " .. self.playerOnlineID);
+        end
         sendServerCommand("CPETemporaryBlindness", "activate", {
             duration    = self.duration,
             radius      = self.radius,
@@ -147,9 +151,11 @@ function CPETemporaryBlindnessServer:deactivate()
     self.player:transmitModData();
 
     if(isMultiplayer()) then
-        print("SERVER: sendServerCommand:deactivate");
-        print("        playerNum: " .. self.playerNum);
-        print("        playerOnlineID: " .. self.playerOnlineID);
+        if(isDebugEnabled()) then
+            print("SERVER: sendServerCommand:deactivate");
+            print("        playerNum: " .. self.playerNum);
+            print("        playerOnlineID: " .. self.playerOnlineID);
+        end
         sendServerCommand("CPETemporaryBlindness", "deactivate", {
             playerNum   = self.playerNum,
             playerOnlineID   = self.playerOnlineID
@@ -167,18 +173,22 @@ function CPETemporaryBlindnessServer:update()
 	md.CPETemporaryBlindness.timeElapsed = self.timeElapsed;
     self.player:transmitModData();
 
-    print("SERVER: update");
-    print("        timeElapsed: " .. self.timeElapsed);
+    if(isDebugEnabled()) then
+        print("SERVER: update");
+        print("        timeElapsed: " .. self.timeElapsed);
+    end
     
     if(self.timeElapsed >= self.duration) then
         self:deactivate();
     elseif(isMultiplayer()) then
-        print("SERVER: sendServerCommand:update");
-        print("        duration: " .. self.duration);
-        print("        timeElapsed: " .. self.timeElapsed);
-        print("        radius: " .. self.radius);
-        print("        playerNum: " .. self.playerNum);
-        print("        playerOnlineID: " .. self.playerOnlineID);
+        if(isDebugEnabled()) then
+            print("SERVER: sendServerCommand:update");
+            print("        duration: " .. self.duration);
+            print("        timeElapsed: " .. self.timeElapsed);
+            print("        radius: " .. self.radius);
+            print("        playerNum: " .. self.playerNum);
+            print("        playerOnlineID: " .. self.playerOnlineID);
+        end
         sendServerCommand("CPETemporaryBlindness", "update", {
             duration = self.duration,
             timeElapsed = self.timeElapsed,
@@ -222,38 +232,5 @@ local function onEveryOneMinute()
     end
 
 end
---[[ 
-local function onEveryTenMinutes()
-    for _, instance in pairs(instances) do
-        if(instance.isActive) then
-            if(isMultiplayer()) then
-                local md = instance.player:getModData();
-                md.CPETemporaryBlindness.isActive = instance.isActive;
-                md.CPETemporaryBlindness.duration = instance.duration;
-                md.CPETemporaryBlindness.timeElapsed = instance.timeElapsed;
-
-                instance.player:transmitModData();
-                
-                print("SERVER: sendServerCommand:update");
-                print("        duration: " .. instance.duration);
-                print("        timeElapsed: " .. instance.timeElapsed);
-                print("        radius: " .. instance.radius);
-                print("        playerNum: " .. instance.playerNum);
-                print("        playerOnlineID: " .. instance.playerOnlineID);
-                sendServerCommand("CPETemporaryBlindness", "update", {
-                    duration = instance.duration,
-                    timeElapsed = instance.timeElapsed,
-                    radius = instance.radius,
-                    playerNum   = instance.playerNum,
-                    playerOnlineID   = instance.playerOnlineID
-                });
-            end
-        end
-    end 
-end
- ]]
-
 
 Events.EveryOneMinute.Add(onEveryOneMinute);
---Events.EveryTenMinutes.Add(onEveryTenMinutes);
-Events.OnClientCommand.Add(onClientCommand);
