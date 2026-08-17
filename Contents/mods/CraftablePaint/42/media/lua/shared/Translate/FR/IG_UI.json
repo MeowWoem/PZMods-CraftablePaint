@@ -1,3 +1,12 @@
 {
-    "IGUI_CraftingCategories_Paint": "Peinture"
+    "IGUI_CraftingCategories_Paint": "Peinture",
+    "IGUI_CPE_HandBurnSymptom": "Vous vous êtes brûlé les mains...",
+    "IGUI_CPE_EyeIrritationSymptom": "Vos yeux vous piquent horriblement...",
+    "IGUI_CPE_LungsIrritationSymptom": "Vos poumons sont irrités...",
+    "IGUI_CPE_ProtectionGloves": "des gants en caoutchouc",
+    "IGUI_CPE_ProtectionGoggles": "des lunettes de protection",
+    "IGUI_CPE_ProtectionMask": "un masque",
+    "IGUI_CPE_PreventionAdvice": "Peut-être auriez-vous dû porter %1 avant de manipuler ce mélange.",
+    "IGUI_CPE_And": "et",
+    "IGUI_CPE_CantReadMap": "Je ne vois pas assez bien pour lire la carte"
 }
