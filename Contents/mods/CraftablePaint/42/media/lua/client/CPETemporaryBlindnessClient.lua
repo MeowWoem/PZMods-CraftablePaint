@@ -170,16 +170,6 @@ local function onServerCommand(module, command, args)
             instance.radius = args.radius;
 
         end
-    elseif(module == "CPEClient") then
-        if(command == "injurePlayer") then
-            local player = getPlayerByOnlineID(args.playerOnlineID);
-            if(not player or not player:isLocalPlayer()) then return; end
-            local sound = player:playerVoiceSound("PainFromLacerate");
-            if(isDebugEnabled()) then
-                print(sound);
-            end
-            HaloTextHelper.addBadText(player, getText("IGUI_BurnedByCausticSodaMessage"));
-        end
     end
 end
 

@@ -5,7 +5,7 @@ local instances = {};
 
 CPELungsIrritationServer.coughChance = {
     start = 60,
-    end = 2
+    ["end"] = 2
 };
 
 function CPELungsIrritationServer.getInstanceForPlayer(player, playerNum, playerOnlineID)

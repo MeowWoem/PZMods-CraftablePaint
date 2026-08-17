@@ -1,3 +1,11 @@
 {
-    "IGUI_CraftingCategories_Paint": "Paint"
+    "IGUI_CraftingCategories_Paint": "Paint",
+    "IGUI_CPE_HandBurnSymptom": "You've burned your hands...",
+    "IGUI_CPE_EyeIrritationSymptom": "Your eyes are stinging badly...",
+    "IGUI_CPE_LungsIrritationSymptom": "Your lungs feel irritated...",
+    "IGUI_CPE_ProtectionGloves": "rubber gloves",
+    "IGUI_CPE_ProtectionGoggles": "safety goggles",
+    "IGUI_CPE_ProtectionMask": "a mask",
+    "IGUI_CPE_PreventionAdvice": "Perhaps you should have worn %1 before handling this mixture.",
+    "IGUI_CPE_And": "and"
 }

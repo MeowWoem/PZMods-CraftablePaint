@@ -1,3 +1,6 @@
+require("CPELungsIrritationServer");
+require("CPETemporaryBlindnessServer");
+
 Recipe = Recipe or {};
 Recipe.OnCreate = Recipe.OnCreate or {};
 
@@ -12,6 +15,12 @@ local SAFETY_GOGGLES_TYPES = {
     ["Base.Glasses_SkiGoggles"] = true,
     ["Base.Glasses_SwimmingGoggles"] = true,
     ["Base.WeldingMask"] = true,
+};
+
+local MASK_TYPES = {
+    ["Base.Mask_Dust"] = true,
+    ["Base.Mask_Gas"] = true,
+    ["Base.Mask_Surgical"] = true,
 };
 
 local function hasProtection(character, protectionType)
@@ -31,7 +40,9 @@ end
 
 
 function Recipe.OnCreate.CraftSlakedLime(craftRecipeData, character)
-    local hasBeenInjured = false;
+    local handInjury = false;
+    local eyeInjury = false;
+    local lungsIrritation = false;
 
     if not hasProtection(character, RUBBER_GLOVE_TYPES) then
         local bodyDamage = character:getBodyDamage();
@@ -43,27 +54,35 @@ function Recipe.OnCreate.CraftSlakedLime(craftRecipeData, character)
         handR:setBurnTime(50);
         handR:setNeedBurnWash(true);
         handR:setAdditionalPain(handR:getAdditionalPain() + 30);
-        hasBeenInjured = true;
-        sendDamage(character);
+        handInjury = true;
     end
 
     if not hasProtection(character, SAFETY_GOGGLES_TYPES) then
         local instance = CPETemporaryBlindnessServer.getInstanceForPlayer(character, character:getPlayerNum(), character:getOnlineID());
-        --instance:activate(20);
-        instance:activate(ZombRand(2880, 4320));
-        hasBeenInjured = true;
+        instance:activate(20);
+        --instance:activate(ZombRand(2880, 4320));
+        eyeInjury = true;
     end
 
-    if(hasBeenInjured) then
+    if not hasProtection(character, MASK_TYPES) then
+        local instance = CPELungsIrritationServer.getInstanceForPlayer(character, character:getPlayerNum(), character:getOnlineID());
+        instance:activate(20);
+        --instance:activate(ZombRand(2880, 4320));
+        lungsIrritation = true;
+    end
+
+    if(handInjury or eyeInjury or lungsIrritation) then
         if(isMultiplayer()) then
-                sendServerCommand("CPEClient", "injurePlayer", {
+            sendServerCommand("CPEClient", "injurePlayer", {
                 playerNum   = character:getPlayerNum(),
-                playerOnlineID   = character:getOnlineID()
+                playerOnlineID   = character:getOnlineID(),
+                handInjury = handInjury,
+                eyeInjury = eyeInjury,
+                lungsIrritation = lungsIrritation,
             });
         else
-            character:playerVoiceSound("PainFromLacerate");
-            HaloTextHelper.addBadText(character, getText("IGUI_BurnedByCausticSodaMessage"));
+            CPEInjuryFeedback.notify(character, handInjury, eyeInjury, lungsIrritation);
         end
     end
-    
+
 end
