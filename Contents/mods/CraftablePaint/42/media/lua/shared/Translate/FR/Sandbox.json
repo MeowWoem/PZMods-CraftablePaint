@@ -1,0 +1,24 @@
+{
+    "Sandbox_CraftablePaintEdition": "Craftable : Paint Edition",
+
+    "Sandbox_CraftablePaintEdition_AllowTemporaryBlindness": "Autoriser la cécité temporaire",
+    "Sandbox_CraftablePaintEdition_AllowTemporaryBlindness_tooltip": "Si activé, crafter de la chaux éteinte sans lunettes de protection provoquera une cécité temporaire qui s'estompe progressivement sur quelques jours.",
+
+    "Sandbox_CraftablePaintEdition_TemporaryBlindnessDurationMin": "Durée de la cécité temporaire (min)",
+    "Sandbox_CraftablePaintEdition_TemporaryBlindnessDurationMin_tooltip": "Durée minimale de la cécité temporaire, en minutes de jeu.",
+
+    "Sandbox_CraftablePaintEdition_TemporaryBlindnessDurationMax": "Durée de la cécité temporaire (max)",
+    "Sandbox_CraftablePaintEdition_TemporaryBlindnessDurationMax_tooltip": "Durée maximale de la cécité temporaire, en minutes de jeu.",
+
+    "Sandbox_CraftablePaintEdition_AllowLungsIrritation": "Autoriser l'irritation des poumons",
+    "Sandbox_CraftablePaintEdition_AllowLungsIrritation_tooltip": "Si activé, crafter de la chaux éteinte sans masque provoquera une irritation des poumons, déclenchant des quintes de toux qui s'estompent progressivement sur quelques jours.",
+
+    "Sandbox_CraftablePaintEdition_LungsIrritationDurationMin": "Durée de l'irritation des poumons (min)",
+    "Sandbox_CraftablePaintEdition_LungsIrritationDurationMin_tooltip": "Durée minimale de l'irritation des poumons, en minutes de jeu.",
+
+    "Sandbox_CraftablePaintEdition_LungsIrritationDurationMax": "Durée de l'irritation des poumons (max)",
+    "Sandbox_CraftablePaintEdition_LungsIrritationDurationMax_tooltip": "Durée maximale de l'irritation des poumons, en minutes de jeu.",
+
+    "Sandbox_CraftablePaintEdition_AllowHandsBurning": "Autoriser les brûlures aux mains",
+    "Sandbox_CraftablePaintEdition_AllowHandsBurning_tooltip": "Si activé, crafter de la chaux éteinte sans gants en caoutchouc Vous brûlera les mains."
+}

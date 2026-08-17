@@ -1,0 +1,24 @@
+{
+    "Sandbox_CraftablePaintEdition": "Craftable: Paint Edition",
+
+    "Sandbox_CraftablePaintEdition_AllowTemporaryBlindness": "Allow Temporary Blindness",
+    "Sandbox_CraftablePaintEdition_AllowTemporaryBlindness_tooltip": "If enabled, crafting slaked lime without safety goggles will cause temporary blindness that fades over a few days.",
+
+    "Sandbox_CraftablePaintEdition_TemporaryBlindnessDurationMin": "Temporary Blindness Duration (Min)",
+    "Sandbox_CraftablePaintEdition_TemporaryBlindnessDurationMin_tooltip": "Minimum duration of the temporary blindness, in in-game minutes.",
+
+    "Sandbox_CraftablePaintEdition_TemporaryBlindnessDurationMax": "Temporary Blindness Duration (Max)",
+    "Sandbox_CraftablePaintEdition_TemporaryBlindnessDurationMax_tooltip": "Maximum duration of the temporary blindness, in in-game minutes.",
+
+    "Sandbox_CraftablePaintEdition_AllowLungsIrritation": "Allow Lungs Irritation",
+    "Sandbox_CraftablePaintEdition_AllowLungsIrritation_tooltip": "If enabled, crafting slaked lime without a mask will cause lung irritation, triggering coughing fits that gradually fade over a few days.",
+
+    "Sandbox_CraftablePaintEdition_LungsIrritationDurationMin": "Lungs Irritation Duration (Min)",
+    "Sandbox_CraftablePaintEdition_LungsIrritationDurationMin_tooltip": "Minimum duration of the lungs irritation, in in-game minutes.",
+
+    "Sandbox_CraftablePaintEdition_LungsIrritationDurationMax": "Lungs Irritation Duration (Max)",
+    "Sandbox_CraftablePaintEdition_LungsIrritationDurationMax_tooltip": "Maximum duration of the lungs irritation, in in-game minutes.",
+
+    "Sandbox_CraftablePaintEdition_AllowHandsBurning": "Allow Hands Burning",
+    "Sandbox_CraftablePaintEdition_AllowHandsBurning_tooltip": "If enabled, crafting slaked lime without rubber gloves will burn your hands."
+}

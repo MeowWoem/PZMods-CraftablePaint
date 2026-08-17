@@ -86,6 +86,9 @@ function CPETemporaryBlindnessClient:update()
 
     self.timeElapsed = self.timeElapsed + self.healRate;
     
+    if(self.player:isGodMod()) then
+        self:deactivate();
+    end
 end
 
 function CPETemporaryBlindnessClient:isBlind()

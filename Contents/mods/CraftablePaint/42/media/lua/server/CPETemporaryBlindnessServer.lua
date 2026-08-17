@@ -178,7 +178,7 @@ function CPETemporaryBlindnessServer:update()
         print("        timeElapsed: " .. self.timeElapsed);
     end
     
-    if(self.timeElapsed >= self.duration) then
+    if(self.timeElapsed >= self.duration or self.player:isGodMod()) then
         self:deactivate();
     elseif(isMultiplayer()) then
         if(isDebugEnabled()) then

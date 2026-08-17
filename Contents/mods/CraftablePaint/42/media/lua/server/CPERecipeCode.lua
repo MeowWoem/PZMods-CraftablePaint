@@ -40,11 +40,14 @@ end
 
 
 function Recipe.OnCreate.CraftSlakedLime(craftRecipeData, character)
+
+    if(character:isGodMod()) then return; end
+
     local handInjury = false;
     local eyeInjury = false;
     local lungsIrritation = false;
 
-    if not hasProtection(character, RUBBER_GLOVE_TYPES) then
+    if (SandboxVars.CraftablePaintEdition.AllowHandsBurning and not hasProtection(character, RUBBER_GLOVE_TYPES)) then
         local bodyDamage = character:getBodyDamage();
         local handL = bodyDamage:getBodyPart(BodyPartType.Hand_L);
         local handR = bodyDamage:getBodyPart(BodyPartType.Hand_R);
@@ -57,17 +60,17 @@ function Recipe.OnCreate.CraftSlakedLime(craftRecipeData, character)
         handInjury = true;
     end
 
-    if not hasProtection(character, SAFETY_GOGGLES_TYPES) then
+    if (SandboxVars.CraftablePaintEdition.AllowTemporaryBlindness and not hasProtection(character, SAFETY_GOGGLES_TYPES)) then
         local instance = CPETemporaryBlindnessServer.getInstanceForPlayer(character, character:getPlayerNum(), character:getOnlineID());
-        instance:activate(20);
-        --instance:activate(ZombRand(2880, 4320));
+        --instance:activate(20);
+        instance:activate(ZombRand(SandboxVars.CraftablePaintEdition.TemporaryBlindnessDurationMin, SandboxVars.CraftablePaintEdition.TemporaryBlindnessDurationMax));
         eyeInjury = true;
     end
 
-    if not hasProtection(character, MASK_TYPES) then
+    if (SandboxVars.CraftablePaintEdition.AllowLungsIrritation and not hasProtection(character, MASK_TYPES)) then
         local instance = CPELungsIrritationServer.getInstanceForPlayer(character, character:getPlayerNum(), character:getOnlineID());
-        instance:activate(20);
-        --instance:activate(ZombRand(2880, 4320));
+        --instance:activate(20);
+        instance:activate(ZombRand(SandboxVars.CraftablePaintEdition.LungsIrritationDurationMin, SandboxVars.CraftablePaintEdition.LungsIrritationDurationMax));
         lungsIrritation = true;
     end
 

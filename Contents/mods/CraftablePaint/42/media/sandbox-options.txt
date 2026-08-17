@@ -1,0 +1,72 @@
+VERSION = 1,
+
+option CraftablePaintEdition.AllowTemporaryBlindness
+{
+    type = boolean,
+    default = true,
+    page = CraftablePaintEdition,
+    translation = CraftablePaintEdition_AllowTemporaryBlindness,
+    tooltip = CraftablePaintEdition_AllowTemporaryBlindness_tooltip,
+}
+
+option CraftablePaintEdition.TemporaryBlindnessDurationMin
+{
+    type = double,
+    min = 20,
+    max = 20160,
+    default = 2880,
+    page = CraftablePaintEdition,
+    translation = CraftablePaintEdition_TemporaryBlindnessDurationMin,
+    tooltip = CraftablePaintEdition_TemporaryBlindnessDurationMin_tooltip,
+}
+
+option CraftablePaintEdition.TemporaryBlindnessDurationMax
+{
+    type = double,
+    min = 20,
+    max = 20160,
+    default = 4320,
+    page = CraftablePaintEdition,
+    translation = CraftablePaintEdition_TemporaryBlindnessDurationMax,
+    tooltip = CraftablePaintEdition_TemporaryBlindnessDurationMax_tooltip,
+}
+
+option CraftablePaintEdition.AllowLungsIrritation
+{
+    type = boolean,
+    default = true,
+    page = CraftablePaintEdition,
+    translation = CraftablePaintEdition_AllowLungsIrritation,
+    tooltip = CraftablePaintEdition_AllowLungsIrritation_tooltip,
+}
+
+option CraftablePaintEdition.LungsIrritationDurationMin
+{
+    type = double,
+    min = 20,
+    max = 20160,
+    default = 2880,
+    page = CraftablePaintEdition,
+    translation = CraftablePaintEdition_LungsIrritationDurationMin,
+    tooltip = CraftablePaintEdition_LungsIrritationDurationMin_tooltip,
+}
+
+option CraftablePaintEdition.LungsIrritationDurationMax
+{
+    type = double,
+    min = 20,
+    max = 20160,
+    default = 4320,
+    page = CraftablePaintEdition,
+    translation = CraftablePaintEdition_LungsIrritationDurationMax,
+    tooltip = CraftablePaintEdition_LungsIrritationDurationMax_tooltip,
+}
+
+option CraftablePaintEdition.AllowHandsBurning
+{
+    type = boolean,
+    default = true,
+    page = CraftablePaintEdition,
+    translation = CraftablePaintEdition_AllowHandsBurning,
+    tooltip = CraftablePaintEdition_AllowHandsBurning_tooltip,
+}
