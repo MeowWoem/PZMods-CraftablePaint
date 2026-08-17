@@ -8,6 +8,7 @@ module Base
 		Tags = InHandCraft,
 		category = Miscellaneous,
 		OnCreate = Recipe.OnCreate.CraftSlakedLime,
+		Tooltip = Tooltip_UpdateNotice,
 		inputs
 		{
 			item 1 [Base.Bucket;Base.BucketForged;Base.BucketEmpty;Base.BucketCarved] mode:keep,
