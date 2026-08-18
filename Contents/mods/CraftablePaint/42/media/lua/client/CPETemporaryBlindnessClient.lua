@@ -6,6 +6,9 @@ local instances = {};
 function CPETemporaryBlindnessClient.getInstanceForPlayer(player, playerNum)
     player = player or getSpecificPlayer(playerNum or 0);
     playerNum = playerNum or player:getPlayerNum();
+
+    if(not player) then return false; end
+
 	if not instances[playerNum] then
 		instances[playerNum] = CPETemporaryBlindnessClient.new(player, playerNum);
 	end
