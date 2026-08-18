@@ -20,5 +20,8 @@
     "Sandbox_CraftablePaintEdition_LungsIrritationDurationMax_tooltip": "Maximum duration of the lungs irritation, in in-game minutes.",
 
     "Sandbox_CraftablePaintEdition_AllowHandsBurning": "Allow Hands Burning",
-    "Sandbox_CraftablePaintEdition_AllowHandsBurning_tooltip": "If enabled, crafting slaked lime without rubber gloves will burn your hands."
+    "Sandbox_CraftablePaintEdition_AllowHandsBurning_tooltip": "If enabled, crafting slaked lime without rubber gloves will burn your hands.",
+    
+    "Sandbox_CraftablePaintEdition_AllowLeatherGlovesProtectiveGear": "Allow Leather Gloves for Hand Protection",
+    "Sandbox_CraftablePaintEdition_AllowLeatherGlovesProtectiveGear_tooltip": "If enabled, crafting slaked lime while wearing leather gloves will protect your hands. Not realistic at all, though!"
 }

@@ -70,3 +70,12 @@ option CraftablePaintEdition.AllowHandsBurning
     translation = CraftablePaintEdition_AllowHandsBurning,
     tooltip = CraftablePaintEdition_AllowHandsBurning_tooltip,
 }
+
+option CraftablePaintEdition.AllowLeatherGlovesProtectiveGear
+{
+    type = boolean,
+    default = false,
+    page = CraftablePaintEdition,
+    translation = CraftablePaintEdition_AllowLeatherGlovesProtectiveGear,
+    tooltip = CraftablePaintEdition_AllowLeatherGlovesProtectiveGear_tooltip,
+}

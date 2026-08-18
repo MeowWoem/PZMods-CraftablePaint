@@ -1,15 +1,26 @@
 require("CPELungsIrritationServer");
 require("CPETemporaryBlindnessServer");
 
-Recipe = Recipe or {};
-Recipe.OnCreate = Recipe.OnCreate or {};
+CPERecipeCode = CPERecipeCode or {};
+CPERecipeCode.OnCreate = CPERecipeCode.OnCreate or {};
 
-local RUBBER_GLOVE_TYPES = {
+CPERecipeCode.RUBBER_GLOVE_TYPES = {
     ["Base.Gloves_Dish"] = true,
     ["Base.Gloves_Surgical"] = true,
+    ["Base.Gloves_GarbageBag"] = true,
 };
 
-local SAFETY_GOGGLES_TYPES = {
+CPERecipeCode.LEATHER_GLOVE_TYPES = {
+    ["Base.Gloves_IceHockeyGloves_Blue"] = true,
+    ["Base.Gloves_IceHockeyGloves_White"] = true,
+    ["Base.Gloves_IceHockeyGloves_Black"] = true,
+    ["Base.Gloves_IceHockeyGloves"] = true,
+    ["Base.Gloves_LeatherGlovesBrown"] = true,
+    ["Base.Gloves_LeatherGlovesBlack"] = true,
+    ["Base.Gloves_LeatherGloves"] = true,
+};
+
+CPERecipeCode.SAFETY_GOGGLES_TYPES = {
     ["Base.Glasses_OldWeldingGoggles"] = true,
     ["Base.Glasses_SafetyGoggles"] = true,
     ["Base.Glasses_SkiGoggles"] = true,
@@ -21,7 +32,7 @@ local SAFETY_GOGGLES_TYPES = {
     ["Base.Hat_ImprovisedGasMask_nofilter"] = true,
 };
 
-local MASK_TYPES = {
+CPERecipeCode.MASK_TYPES = {
     ["Base.Mask_Dust"] = true,
     ["Base.Hat_GasMask"] = true,
     ["Base.Hat_ImprovisedGasMask"] = true,
@@ -45,16 +56,20 @@ end
 
 
 
-function Recipe.OnCreate.CraftSlakedLime(craftRecipeData, character)
+function CPERecipeCode.OnCreate.CraftSlakedLime(craftRecipeData, character)
 
     if(character:isGodMod()) then return; end
 
     local handInjury = false;
     local eyeInjury = false;
     local lungsIrritation = false;
+    
+    local handIsProtected = hasProtection(character, CPERecipeCode.RUBBER_GLOVE_TYPES)
+        or (SandboxVars.CraftablePaintEdition.AllowLeatherGlovesProtectiveGear and hasProtection(character, CPERecipeCode.LEATHER_GLOVE_TYPES));
 
-    if (SandboxVars.CraftablePaintEdition.AllowHandsBurning and not hasProtection(character, RUBBER_GLOVE_TYPES)) then
-        local bodyDamage = character:getBodyDamage();
+    local bodyDamage = character:getBodyDamage();
+
+    if (SandboxVars.CraftablePaintEdition.AllowHandsBurning and not handIsProtected) then
         local handL = bodyDamage:getBodyPart(BodyPartType.Hand_L);
         local handR = bodyDamage:getBodyPart(BodyPartType.Hand_R);
         handL:setBurnTime(50);
@@ -63,20 +78,34 @@ function Recipe.OnCreate.CraftSlakedLime(craftRecipeData, character)
         handR:setBurnTime(50);
         handR:setNeedBurnWash(true);
         handR:setAdditionalPain(handR:getAdditionalPain() + 30);
+
+        syncBodyPart(handL, 0x380400000);
+        syncBodyPart(handR, 0x380400000);
+
         handInjury = true;
     end
 
-    if (SandboxVars.CraftablePaintEdition.AllowTemporaryBlindness and not hasProtection(character, SAFETY_GOGGLES_TYPES)) then
+    if (SandboxVars.CraftablePaintEdition.AllowTemporaryBlindness and not hasProtection(character, CPERecipeCode.SAFETY_GOGGLES_TYPES)) then
         local instance = CPETemporaryBlindnessServer.getInstanceForPlayer(character, character:getPlayerNum(), character:getOnlineID());
-        --instance:activate(20);
+        local head = bodyDamage:getBodyPart(BodyPartType.Head);
+        head:setAdditionalPain(head:getAdditionalPain() + 30);
+
+        syncBodyPart(head, 0x400000);
+
         instance:activate(ZombRand(SandboxVars.CraftablePaintEdition.TemporaryBlindnessDurationMin, SandboxVars.CraftablePaintEdition.TemporaryBlindnessDurationMax));
+        
         eyeInjury = true;
     end
 
-    if (SandboxVars.CraftablePaintEdition.AllowLungsIrritation and not hasProtection(character, MASK_TYPES)) then
+    if (SandboxVars.CraftablePaintEdition.AllowLungsIrritation and not hasProtection(character, CPERecipeCode.MASK_TYPES)) then
         local instance = CPELungsIrritationServer.getInstanceForPlayer(character, character:getPlayerNum(), character:getOnlineID());
-        --instance:activate(20);
+        local torsoUpper = bodyDamage:getBodyPart(BodyPartType.Torso_Upper);
+        torsoUpper:setAdditionalPain(torsoUpper:getAdditionalPain() + 30);
+
+        syncBodyPart(torsoUpper, 0x400000);
+
         instance:activate(ZombRand(SandboxVars.CraftablePaintEdition.LungsIrritationDurationMin, SandboxVars.CraftablePaintEdition.LungsIrritationDurationMax));
+        
         lungsIrritation = true;
     end
 

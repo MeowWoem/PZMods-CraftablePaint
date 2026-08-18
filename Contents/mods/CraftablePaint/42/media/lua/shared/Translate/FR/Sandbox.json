@@ -20,5 +20,8 @@
     "Sandbox_CraftablePaintEdition_LungsIrritationDurationMax_tooltip": "Durée maximale de l'irritation des poumons, en minutes de jeu.",
 
     "Sandbox_CraftablePaintEdition_AllowHandsBurning": "Autoriser les brûlures aux mains",
-    "Sandbox_CraftablePaintEdition_AllowHandsBurning_tooltip": "Si activé, crafter de la chaux éteinte sans gants en caoutchouc Vous brûlera les mains."
+    "Sandbox_CraftablePaintEdition_AllowHandsBurning_tooltip": "Si activé, crafter de la chaux éteinte sans gants en caoutchouc vous brûlera les mains.",
+
+    "Sandbox_CraftablePaintEdition_AllowLeatherGlovesProtectiveGear": "Autoriser les gants en cuir pour protéger les mains",
+    "Sandbox_CraftablePaintEdition_AllowLeatherGlovesProtectiveGear_tooltip": "Si activé, crafter de la chaux éteinte avec gants en cuir vous protégera les mains. Mais ce n'est pas du tout réaliste !"
 }
