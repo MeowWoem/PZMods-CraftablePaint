@@ -11,6 +11,7 @@ This document lists every recipe added by this mod, along with the exact protect
   - [Wallpapers and More Paint Options — Extra Colors](#wallpapers-and-more-paint-options--extra-colors)
 - [Protective Equipment](#protective-equipment)
   - [Rubber Gloves](#rubber-gloves)
+  - [Leather Gloves (Sandbox Option)](#leather-gloves-sandbox-option)
   - [Safety Goggles](#safety-goggles)
   - [Mask](#mask)
 
@@ -114,25 +115,32 @@ Crafting Slaked Lime without the right gear triggers a hazard — see the mod's 
 Any item below counts — you only need one per category.
 
 ### Rubber Gloves
-Prevents hand burns.
+Prevents hand burns. Always active, regardless of Sandbox settings.
 - Rubber Gloves `(Base.Gloves_Dish)`
 - Surgical Gloves `(Base.Gloves_Surgical)`
+- Improvised Garbage Bag Gloves `(Base.Gloves_GarbageBag)`
+
+### Leather Gloves (Sandbox Option)
+Also prevents hand burns, **only if the "Allow Leather Gloves for Hand Protection" Sandbox option is enabled** (off by default — not chemically realistic, offered purely for gameplay convenience). Fingerless gloves and thin fabric/dress gloves are intentionally excluded, no matter what the option says.
+- Ice Hockey Gloves `(Base.Gloves_IceHockeyGloves_Blue|Base.Gloves_IceHockeyGloves_White|Base.Gloves_IceHockeyGloves_Black|Base.Gloves_IceHockeyGloves)`
+- Leather Gloves `(Base.Gloves_LeatherGlovesBrown|Base.Gloves_LeatherGlovesBlack|Base.Gloves_LeatherGloves)`
 
 ### Safety Goggles
-Prevents temporary blindness.
+Prevents temporary blindness. The visor/lens keeps particles out of your eyes whether or not a gas mask's filter cartridge is installed.
 - Old Welding Goggles `(Base.Glasses_OldWeldingGoggles)`
 - Safety Goggles `(Base.Glasses_SafetyGoggles)`
 - Ski Goggles `(Base.Glasses_SkiGoggles)`
 - Swimming Goggles `(Base.Glasses_SwimmingGoggles)`
 - Welding Mask `(Base.WeldingMask)`
-- Gas Mask (with or without filter) `(Base.Hat_GasMask`)`
-- Improvised Gas Mask (with or without filter) `(Base.Hat_ImprovisedGasMak`)`
-- Half Mask Separator (with or without filter) `(Base.Hat_BuilderRespirator)`
+- Gas Mask, with filter `(Base.Hat_GasMask)`
+- Gas Mask, without filter `(Base.Hat_GasMask_nofilter)`
+- Improvised Gas Mask, with filter `(Base.Hat_ImprovisedGasMask)`
+- Improvised Gas Mask, without filter `(Base.Hat_ImprovisedGasMask_nofilter)`
 
 ### Mask
-Prevents lung irritation.
+Prevents lung irritation. Unlike Safety Goggles above, the **filter cartridge must be present** — a mechanical/chemical filter is what actually stops the fine dust from being inhaled, the mask shell alone does nothing.
 - Dust Mask `(Base.Mask_Dust)`
 - Surgical Mask `(Base.Mask_Surgical)`
-- Gas Mask (with filter but works with worn filters) `(Base.Hat_GasMask`)`
-- Improvised Gas Mask (with filter but works with worn filters) `(Base.Hat_ImprovisedGasMak`)`
-- Half Mask Separator (with filter but works with worn filters) `(Base.Hat_BuilderRespirator)`
+- Gas Mask, with filter only `(Base.Hat_GasMask)`
+- Improvised Gas Mask, with filter only `(Base.Hat_ImprovisedGasMask)`
+- PLACEHOLDER `(Base.Hat_BuilderRespirator)`
