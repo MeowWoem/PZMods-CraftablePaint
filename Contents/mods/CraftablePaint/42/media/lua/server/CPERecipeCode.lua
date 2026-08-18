@@ -33,11 +33,11 @@ CPERecipeCode.SAFETY_GOGGLES_TYPES = {
 };
 
 CPERecipeCode.MASK_TYPES = {
-    ["Base.Mask_Dust"] = true,
+    ["Base.Hat_DustMask"] = true,
     ["Base.Hat_GasMask"] = true,
     ["Base.Hat_ImprovisedGasMask"] = true,
-    ["Base.Mask_Surgical"] = true,
-    ["Base.Hat_BuilderRespirator"] = true,
+    ["Base.Hat_SurgicalMask"] = true,
+    ["Base.Hat_BuildersRespirator"] = true,
 };
 
 local function hasProtection(character, protectionType)
