@@ -8,4 +8,22 @@ module Base {
         WorldStaticModel = Quicklime,
     }
 
+
+
+    item Gloves_GarbageBag
+    {
+        DisplayCategory = Accessory,
+        ItemType = base:clothing,
+        Weight = 0.1,
+        Icon = GarbageBagGloves,
+        BloodLocation = Hands;ForeArm_L;ForeArm_R,
+        BodyLocation = base:hands,
+        ClothingItem = Gloves_GarbageBag,
+        Insulation = 0.25,
+        WaterResistance = 1.0,
+        WindResistance = 0.5,
+        ScratchDefense = 1,
+        WorldStaticModel = GlovesLong_Ground,
+    }
+
 }
