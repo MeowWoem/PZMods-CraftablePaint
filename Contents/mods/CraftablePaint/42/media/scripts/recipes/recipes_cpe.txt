@@ -27,6 +27,8 @@ module Base
 		category = Miscellaneous,
 		OnCreate = CPERecipeCode.OnCreate.CraftSlakedLime,
 		Tooltip = Tooltip_UpdateNotice,
+        NeedToBeLearn = true,
+        AutoLearnAll = Masonry:5;Cooking:3,
 		inputs
 		{
 			item 1 [Base.Bucket;Base.BucketForged;Base.BucketEmpty;Base.BucketCarved] mode:keep,
@@ -46,6 +48,8 @@ module Base
 		Time = 150,
 		Tags = InHandCraft,
 		category = Paint,
+        NeedToBeLearn = true,
+        AutoLearnAll = Cooking:5,
 		inputs
 		{
 			item 1 [Base.PaintbucketEmpty] mode:destroy,
@@ -65,6 +69,8 @@ module Base
 		Time = 170,
 		Tags = InHandCraft,
 		category = Paint,
+        NeedToBeLearn = true,
+        AutoLearnAll = Cooking:5,
 		inputs
 		{
 			item 1 tags[base:mortarpestle] mode:keep,
@@ -86,6 +92,8 @@ module Base
 		Time = 150,
 		Tags = InHandCraft,
 		category = Paint,
+        NeedToBeLearn = true,
+        AutoLearnAll = Cooking:5,
 		inputs
 		{
 			item 1 [Base.PaintbucketEmpty] mode:destroy,
@@ -106,6 +114,8 @@ module Base
 		Time = 170,
 		Tags = InHandCraft,
 		category = Paint,
+        NeedToBeLearn = true,
+        AutoLearnAll = Cooking:5,
 		inputs
 		{
 			item 1 tags[base:mortarpestle] mode:keep,
@@ -127,6 +137,8 @@ module Base
 		Time = 170,
 		Tags = InHandCraft,
 		category = Paint,
+        NeedToBeLearn = true,
+        AutoLearnAll = Cooking:5,
 		inputs
 		{
 			item 1 tags[base:mortarpestle] mode:keep,
@@ -149,6 +161,8 @@ module Base
 		Time = 170,
 		Tags = InHandCraft,
 		category = Paint,
+        NeedToBeLearn = true,
+        AutoLearnAll = Cooking:5,
 		inputs
 		{
 			item 1 tags[base:mortarpestle] mode:keep,
@@ -170,6 +184,8 @@ module Base
 		Time = 170,
 		Tags = InHandCraft,
 		category = Paint,
+        NeedToBeLearn = true,
+        AutoLearnAll = Cooking:5,
 		inputs
 		{
 			item 1 tags[base:mortarpestle] mode:keep,
@@ -191,6 +207,8 @@ module Base
 		Time = 170,
 		Tags = InHandCraft,
 		category = Paint,
+        NeedToBeLearn = true,
+        AutoLearnAll = Cooking:5,
 		inputs
 		{
 			item 1 tags[base:file] mode:keep flags[MayDegradeLight],
@@ -213,6 +231,8 @@ module Base
 		Time = 170,
 		Tags = InHandCraft,
 		category = Paint,
+        NeedToBeLearn = true,
+        AutoLearnAll = Cooking:5,
 		inputs
 		{
 			item 1 tags[base:file] mode:keep flags[MayDegradeLight],
@@ -235,6 +255,8 @@ module Base
 		Time = 150,
 		Tags = InHandCraft,
 		category = Paint,
+        NeedToBeLearn = true,
+        AutoLearnAll = Cooking:5,
 		inputs
 		{
 			item 1 [Base.PaintbucketEmpty] mode:destroy,
