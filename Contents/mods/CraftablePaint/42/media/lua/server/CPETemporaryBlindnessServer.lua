@@ -21,7 +21,7 @@ function CPETemporaryBlindnessServer.getInstanceForPlayer(player, playerNum, pla
         playerNum = playerNum or player:getPlayerNum();
     end
 
-	if not instances[instanceID] then
+	if not instances[instanceID] or instances[instanceID].player ~= player then
 		instances[instanceID] = CPETemporaryBlindnessServer.new(player, playerNum, playerOnlineID);
 	end
 	return instances[instanceID];
@@ -233,4 +233,14 @@ local function onEveryOneMinute()
 
 end
 
+local function onCharacterDeath(character)
+    if not instanceof(character, "IsoPlayer") then return; end
+
+    local instanceID = character:getPlayerNum();
+    if(isMultiplayer()) then
+        instanceID = character:getOnlineID();
+    end
+
+    instances[instanceID] = nil;
+end
 Events.EveryOneMinute.Add(onEveryOneMinute);

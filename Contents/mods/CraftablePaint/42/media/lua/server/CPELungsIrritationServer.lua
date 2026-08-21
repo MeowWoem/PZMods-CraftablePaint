@@ -21,7 +21,7 @@ function CPELungsIrritationServer.getInstanceForPlayer(player, playerNum, player
         playerNum = playerNum or player:getPlayerNum();
     end
 
-	if not instances[instanceID] then
+	if not instances[instanceID] or instances[instanceID].player ~= player then
 		instances[instanceID] = CPELungsIrritationServer.new(player, playerNum, playerOnlineID);
 	end
 	return instances[instanceID];
@@ -164,4 +164,17 @@ local function onEveryOneMinute()
 
 end
 
+
+local function onCharacterDeath(character)
+    if not instanceof(character, "IsoPlayer") then return; end
+
+    local instanceID = character:getPlayerNum();
+    if(isMultiplayer()) then
+        instanceID = character:getOnlineID();
+    end
+
+    instances[instanceID] = nil;
+end
+
+Events.OnCharacterDeath.Add(onCharacterDeath);
 Events.EveryOneMinute.Add(onEveryOneMinute);

@@ -9,7 +9,7 @@ function CPETemporaryBlindnessClient.getInstanceForPlayer(player, playerNum)
 
     if(not player) then return false; end
 
-	if not instances[playerNum] then
+	if not instances[playerNum] or instances[playerNum].player ~= player then
 		instances[playerNum] = CPETemporaryBlindnessClient.new(player, playerNum);
 	end
 	return instances[playerNum];
@@ -178,7 +178,13 @@ local function onServerCommand(module, command, args)
         end
     end
 end
+local function onCharacterDeath(character)
+    if not instanceof(character, "IsoPlayer") then return; end
 
+    instances[character:getPlayerNum()] = nil;
+end
+
+Events.OnCharacterDeath.Add(onCharacterDeath);
 Events.OnCreatePlayer.Add(onCreatePlayer)
 Events.OnPlayerUpdate.Add(onPlayerUpdate)
 Events.EveryOneMinute.Add(onEveryOneMinute)
