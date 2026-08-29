@@ -66,3 +66,8 @@ Fixed:
 Added:
 - Added a "Require Recipes to be Learned" sandbox option (on by default): when enabled, recipes must be unlocked via the VHS tape or by reaching the required skill levels; when disabled, all recipes are known from the start.
 [ ------ ]
+
+[ v1.3.2 - 08.29.2026 ]
+Changed:
+- Cleaning scripts and remove unused files
+[ ------ ]
