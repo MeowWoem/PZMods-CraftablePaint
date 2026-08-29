@@ -79,3 +79,12 @@ option CraftablePaintEdition.AllowLeatherGlovesProtectiveGear
     translation = CraftablePaintEdition_AllowLeatherGlovesProtectiveGear,
     tooltip = CraftablePaintEdition_AllowLeatherGlovesProtectiveGear_tooltip,
 }
+
+option CraftablePaintEdition.RequireRecipesToBeLearned
+{
+    type = boolean,
+    default = true,
+    page = CraftablePaintEdition,
+    translation = CraftablePaintEdition_RequireRecipesToBeLearned,
+    tooltip = CraftablePaintEdition_RequireRecipesToBeLearned_tooltip,
+}

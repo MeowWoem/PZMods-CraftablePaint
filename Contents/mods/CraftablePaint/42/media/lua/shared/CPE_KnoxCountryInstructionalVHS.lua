@@ -307,5 +307,50 @@ end
 
 end
 
+if isServer() then
+    local function onEveryOneMinute()
+        if SandboxVars.CraftablePaintEdition.RequireRecipesToBeLearned then
+            return;
+        end
+        local players = getOnlinePlayers();
+        for i = 0, players:size() - 1 do
+            local p = players:get(i);
+            local knownRecipes = p:getKnownRecipes();
+            for _, tape in ipairs(Tapes) do
+                for _, step in ipairs(tape.recipeSteps) do
+                    for _, recipeName in ipairs(step.recipes) do
+                        if not knownRecipes:contains(recipeName) then
+                            knownRecipes:add(recipeName);
+                        end
+                    end
+                end
+            end
+        end
+    end
+    Events.EveryOneMinute.Add(onEveryOneMinute);
+else
+    local function onGameStart()
+        if SandboxVars.CraftablePaintEdition.RequireRecipesToBeLearned then
+            return;
+        end
+        for playerNumber = 0, 3 do
+            local p = getSpecificPlayer(playerNumber);
+            if p then
+                local knownRecipes = p:getKnownRecipes();
+                for _, tape in ipairs(Tapes) do
+                    for _, step in ipairs(tape.recipeSteps) do
+                        for _, recipeName in ipairs(step.recipes) do
+                            if not knownRecipes:contains(recipeName) then
+                                knownRecipes:add(recipeName);
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    Events.OnGameStart.Add(onGameStart);
+end
 Events.OnInitRecordedMedia.Add(registerTapes);
 Events.OnDeviceText.Add(onDeviceText);
