@@ -185,7 +185,7 @@ local function onCharacterDeath(character)
 end
 
 Events.OnCharacterDeath.Add(onCharacterDeath);
-Events.OnCreatePlayer.Add(onCreatePlayer)
-Events.OnPlayerUpdate.Add(onPlayerUpdate)
-Events.EveryOneMinute.Add(onEveryOneMinute)
+Events.OnCreatePlayer.Add(onCreatePlayer);
+Events.OnPlayerUpdate.Add(onPlayerUpdate);
+Events.EveryOneMinute.Add(onEveryOneMinute);
 Events.OnServerCommand.Add(onServerCommand);

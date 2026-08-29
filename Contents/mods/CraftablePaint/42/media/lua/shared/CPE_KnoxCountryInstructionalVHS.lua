@@ -220,7 +220,7 @@ local function applyTapeLine(player, codes)
                     for requiredIndex in pairs(step.requiredSet) do
                         if not stepProgress.seen[requiredIndex] then
                             allRequiredLinesSeen = false;
-                            break;
+                            break
                         end
                     end
 

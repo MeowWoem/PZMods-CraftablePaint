@@ -8,5 +8,5 @@ function ISWorldMap.ShowWorldMap(playerNum, centerX, centerY, zoom)
         CPEUtils.addBadText(instance.player, getText("IGUI_CPE_CantReadMap"));
         return;
     end
-    old_ISWorldMap_ShowWorldMap(playerNum, centerX, centerY, zoom)
+    old_ISWorldMap_ShowWorldMap(playerNum, centerX, centerY, zoom);
 end
