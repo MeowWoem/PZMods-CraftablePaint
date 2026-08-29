@@ -1,0 +1,68 @@
+[ v1.0.0 - 08.07.2026 ]
+Release
+[ ------ ]
+
+[ v1.1.0 - 08.14.2026 ]
+Added:
+- Added support for "Wallpaper and More Paint Options" mod and for all mods that changes the useDelta of paints
+[ ------ ]
+
+[ v1.1.1 - 08.15.2026 ]
+Fixed:
+- Fixed a bug where mixing paint duplicate the empty bucket
+[ ------ ]
+
+[ v1.1.2 - 08.15.2026 ]
+Changed:
+- Replaced the mod poster with a new 100% handcrafted poster.
+[ ------ ]
+
+[ v1.2.0 - 08.17.2026 ]
+Added:
+- Crafting Slaked Lime without proper protection can now burn your hands, cause temporary blindness, or irritate your lungs
+- Hand burns from unprotected crafting (requires rubber gloves)
+- Temporary blindness from unprotected crafting (requires safety goggles)
+- Lung irritation with coughing fits from unprotected crafting (requires a mask)
+- Sandbox options to enable/disable each hazard individually
+- Sandbox options for min/max duration of temporary blindness and lung irritation
+- God Mode now instantly cures active blindness and lung irritation, in addition to vanilla injury immunity
+- In-game warning added to the Slake Lime recipe tooltip
+[ ------ ]
+
+[ v1.2.1 - 08.18.2026 ]
+Fixed:
+- Syntax error causing crash
+[ ------ ]
+
+[ v1.2.2 - 08.18.2026 ]
+Added:
+- Improvised Garbage Bag Gloves `(Base.Gloves_GarbageBag)` as an improvised alternative to protect your hands from burns
+- New Sandbox option to allow Leather Gloves (ice hockey gloves, plain/brown/black leather gloves) as hand protection — off by default, not chemically realistic, offered purely for convenience
+- Temporary blindness and lung irritation now also apply additional pain to the affected body part, on top of the existing effects
+[ ------ ]
+
+[ v1.2.3 - 08.18.2026 ]
+Fixed:
+- The mask IDs were incorrects. Therefore, the masks do not protect against lung irritation, sorry about that... my bad
+[ ------ ]
+
+[ v1.2.4 - 08.18.2026 ]
+Fixed:
+- Fixed a bug that occurred when using a flyer to view the location's position on the map.
+[ ------ ]
+
+[ v1.3.0 - 08.21.2026 ]
+Changed:
+- Recipes now require being learned, either by having the necessary skills or by finding and watching a VHS tape
+
+Added:
+- New VHS tape: "Self-sufficiency Module 8: Make your own paint"
+
+Fixed:
+- Temporary blindness effect from paint hazards no longer persists after character death (instance cache wasn't resetting properly on a new character, causing the effect to carry over and ignore god mode)
+[ ------ ]
+
+[ v1.3.1 - 08.21.2026 ]
+Added:
+- Added a "Require Recipes to be Learned" sandbox option (on by default): when enabled, recipes must be unlocked via the VHS tape or by reaching the required skill levels; when disabled, all recipes are known from the start.
+[ ------ ]
